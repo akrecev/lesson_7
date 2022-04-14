@@ -1,0 +1,128 @@
+@import "null.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:regular,700,900&display=swap);
+
+body {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 160%;
+	color: #424551;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+main {
+	padding: 20px 0 50px 0;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+	color: #1e212c;
+	margin-bottom: 26px;
+}
+
+.calendar {
+	margin: 0 24px 40px 0;
+	padding: 0 0 0 24px;
+	display: inline-block;
+	background: url(../img/Stroke.png) 0 5px / 16px no-repeat;
+	color: #787A80;
+}
+.reading-time {
+	margin: 0 24px 40px 0;
+	padding: 0 0 0 24px;
+	display: inline-block;
+	background: url(../img/Union.png) 0 5px / 16px no-repeat;
+	color: #787A80;
+}
+
+
+.image {
+	border-radius: 4px;
+	margin-bottom: 60px;
+}
+
+.paragraph-1 {
+	margin-bottom: 24px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 150%;
+	color: #1e212c;
+}
+
+.paragraph-2 {
+	margin-bottom: 48px;
+}
+
+.paragraph-3 {
+	margin-bottom: 48px;
+	padding-left: 58px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 150%;
+	color: #1e212c;
+	background: url(../img/Rectangle.png) 0 5px / 10px no-repeat, url(../img/Rectangle.png) 18px 5px / 10px no-repeat;
+}
+
+.paragraph-4 {
+	margin-bottom: 24px;
+}
+
+.list {
+	margin-bottom: 24px;
+}
+.item {
+	margin: 0 0 4px 0;
+	padding-left: 32px;
+	background: url(../img/Vector.png) 0 5px / 16px no-repeat;
+	min-height: 16px;
+}
+
+.paragraph-5 {
+	margin-bottom: 200px;
+}
+
+.part-two-start {
+	font-weight: 700;
+	line-height: 150%;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #1E212C;
+	margin: 0 0 8px 0;
+}
+
+.part-two-header {
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 130%;
+	color: #1E212C;
+	margin: 0 0 40px 0;
+}
+
+.list-2 {
+	max-width: 390px;
+	margin: 0 0 22px 0;
+}
+
+.item-list-2 {
+	padding: 0 0 0 32px;
+	margin: 0 0 12px 0;
+	background: url(../img/Vector.png) 0 5px / 16px no-repeat;
+	min-height: 16px;
+}
+
+.more {
+	display: inline-block;
+	padding: 5px 32px;
+	background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+	border-radius: 4px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 44px;
+	text-align: center;
+	letter-spacing: 0.5px;
+	color: #FFFFFF;
+}

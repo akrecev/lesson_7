@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson 7</title>
+</head>
+
+
+<body>
+
+	<div class="wrapper">
+		<header id="header">
+			<h1>Background.</h1>
+			<div class="description">
+				Cвойство <span class='mark'>background</span> устанавливает свойства стиля фона - такие как цвет,
+				изображение, источник и
+				размер, или метод повтора. <br>
+				Это универсальное CSS свойство позволяет одновременно задать несколько параметров фона, <span
+					class="underline">а именно</span> - определить цвет,
+				установить фоновое изображение, задать начальное положение фонового изображения, определить как будет
+				повторяться
+				фоновое изображение, установить будет ли прокручиваться фоновое изображение вместе с содержимым и
+				масштабировать фоновое
+				изображение согласно заданным размерам. Так же значением свойства background может быть указана
+				градиентная заливка
+				фона. <br>
+				Каждый блок html-элемента имеет фоновый слой, который может быть полностью прозрачным (по умолчанию) или
+				заполнен цветом
+				и/или одним или несколькими изображениями. CSS-свойства фона указывают, какой цвет <span
+					class='mark'>background-color</span> и изображения
+				<span class='mark'>background-image</span> использовать, а также их размер, расположение, способ укладки
+				и т.д.
+
+				Свойства фона не наследуются, но фон родительского блока будет просвечивать по умолчанию из-за
+				начального значения в
+				<span class='mark'>background-color: transparent</span>.
+
+				Фон не отображается у пустых элементов с нулевой высотой. Отрицательные значения свойства margin не
+				влияют на фон
+				элемента.
+			</div>
+			<nav>
+				<a class="chapter-1" href="#background-color">Background-color</a>
+				<a class="chapter-2" href="#background-image">Background-image</a>
+				<a class="chapter-3" href="#background-repeat">Background-repeat</a>
+				<a class="chapter-4" href="#background-position">Background-position</a>
+				<a class="chapter-5" href="#background-attachment">Background-attachment</a>
+				<a class="chapter-6" href="#background-size">Background-size</a>
+				<a class="chapter-7" href="#background-multi-image">Установка нескольких фоновых изображений для
+					блока</a>
+				<a class="chapter-7" href="#universal-set">Универсальное свойство <span class='mark'>background</span></a>
+				<a class="page-2" href="page-2.html" target="blanc">Макет Figma</a>
+			</nav>
+		</header>
+		<main>
+			<div id="background-color">
+				<h2>Background-color</h2>
+				<div class="background-color-content">
+					Свойство background-color устанавливает цвет фона элемента. Цвет рисуется за фоновыми изображениями.
+					Для блочных
+					элементов цвет фона распространяется на всю ширину и высоту блока элемента, для строчных — только на
+					область их
+					содержимого.
+
+					Цвет фона обрезается в соответствии со значением background-clip самого нижнего слоя фонового
+					изображения.
+
+					Свойство не наследуется. <br>
+					<span class='underline'>Значения:</span> <br>
+					<span class='mark'>цвет</span> - значение принимает все форматы цвета свойства color. Значение по
+					умолчанию <span class='mark'>transparent</span>. <br>
+					<span class='mark'>initial</span> - устанавливает значение свойства в значение по умолчанию. <br>
+					<span class='mark'>inherit</span> - наследует значение свойства от родительского элемента.
+				</div>
+				<div class="background-color-1">
+					background-color:blue;
+				</div>
+				<div class="background-color-1">
+					background-color:rgb(0, 0, 255);
+				</div>
+				<div class="background-color-3">
+					background-color:rgba(0, 0, 255, 0.5); <br>
+					полупрозрачный
+				</div>
+				<div class="background-color-4">
+					background-color:transparent; <br>
+					по умолчанию - прозрачный
+				</div>
+			</div>
+
+			<div id="background-image">
+				<h2>Background-image</h2>
+				<div class="background-image-content">
+					Свойство <span class='mark'>background-image</span> устанавливает фоновое изображение (одно или
+					несколько) элемента. Значение <span class='mark'>none</span> считается слоем
+					изображения, но ничего не рисует. <br>
+					Изображение, которое является пустым (нулевой ширины или нулевой высоты), которое не
+					загружается или не может быть отображено (например, потому что оно не в поддерживаемом формате
+					изображения) также
+					считается слоем, но ничего не рисует. <br>
+
+					Семантически важные изображения должны предоставляться в разметке документа, например, с тегом
+					&lt;img&gt;. <br>
+					Свойство не наследуется. <br>
+					<span class='underline'>Значения:</span> <br>
+					<span class='mark'>изображение</span> - Обозначает 2D-изображение. Это может быть ссылка на URL,
+					нотация image() или запись градиента. Значение по умолчанию
+					<span class='mark'>none</span>. <br>
+					<span class='mark'>inherit</span> - наследует значение свойства от родительского элемента.
+				</div>
+				<div class="background-image-1">
+					background-image: url(https:edu.fls.guru/img/logo.webp), linear-gradient(180deg, blue 0%, yellow
+					100%);
+				</div>
+				<div class="background-image-2">
+					background-image: url(../img/man.png);
+				</div>
+				<div class="background-image-3">
+					background-image: linear-gradient(white, gray);
+				</div>
+				<div class="background-image-4">
+					background-image: radial-gradient(white, gray);
+				</div>
+				<div class="background-image-5">
+					background-image: inherit;
+				</div>
+			</div>
+			<div id="background-repeat">
+				<h2>Background-repeat</h2>
+				Определяет, как будет повторяться фоновое изображение <br>
+				Свойство <span class='mark'>background-repeat</span> определяет, как фоновые изображения
+				укладываются в области фона после того, как для них
+				установлены размеры и позиционирование. Если значение свойства имеет два ключевых слова, первое
+				используется для
+				горизонтального направления, второе — для вертикального. <br>
+				Свойство не наследуется. <br>
+
+				<span class='underline'>Значения:</span> <br>
+
+				<span class='mark'>repeat</span> - изображение повторяется в обоих направлениях так
+				часто, чтобы покрыть область отрисовки фона. Если изображение не
+				помещается, оно обрезается. Вычисляется в <span class='mark'>repeat repeat</span>. Значение по
+				умолчанию. <br>
+				<div class="background-repeat-1">
+					background-repeat:repeat; изображение повторяется, то что не поместилось - обрезается
+				</div>
+				<div class="background-repeat-1-1">
+					background-repeat:repeat; изображение обрезается
+				</div>
+
+				<span class='mark'>no-repeat</span> - изображение размещается один раз и не повторяется. Вычисляется
+				в <span class='mark'>no-repeat no-repeat</span>. <br>
+				<div class="background-repeat-2">
+					background-repeat:no-repeat;
+				</div>
+
+				<span class='mark'>repeat-x</span> - изображение повторяется в горизонтальном направлении.
+				Вычисляется в <span class='mark'>repeat no-repeat</span>. <br>
+				<div class="background-repeat-3">
+					background-repeat:repeat-x;
+				</div>
+
+				<span class='mark'>repeat-y</span> - изображение повторяется в горизонтальном направлении.
+				Вычисляется в <span class='mark'>no-repeat repeat</span>. <br>
+				<div class="background-repeat-4">
+					background-repeat:repeat-y;
+				</div>
+
+				<span class='mark'>space</span> - изображение повторяется столько раз, сколько оно помещается в
+				области фона, не обрезаясь, изображения расположены на
+				равном расстоянии друг от друга. Первое и последнее изображения касаются краев области. Если область
+				рисования фона
+				больше, чем область позиционирования фона, шаблон повторяется, чтобы заполнить область рисования
+				фона. Если недостаточно
+				места для двух копий изображения, то размещается только одно изображение, а свойство <span
+					class='mark'>background-position</span> определяет его
+				положение. Вычисляется в <span class='mark'>space space</span>. <br>
+				<div class="background-repeat-5">
+					background-repeat:space;
+				</div>
+				<div class="background-repeat-5-1">
+					background-repeat:space no-repeat;
+				</div>
+
+				<span class='mark'>round</span> - Изображение повторяется так часто, чтобы заполнить область фона,
+				масштабируясь и не обрезаясь. Вычисляется в <span class='mark'>round round</span>. <br>
+				<div class="background-repeat-6">
+					background-repeat:round;
+				</div>
+				<div class="background-repeat-6-1">
+					background-repeat:round no-repeat;
+				</div>
+			</div>
+			<div id="background-position">
+				<h2>Background-position</h2>
+				Задает начальное положение фонового изображения, где первое значение (проценты, px, слово) определяет
+				расположение по
+				горизонтали, второе - вертикали. <br>
+				Свойство не наследуется. <br>
+				<div class="background-position-1">
+					background-position: top left или 0 0 ; - по умолчанию
+				</div>
+				<div class="background-position-2">
+					background-position: center;
+				</div>
+				<div class="background-position-3">
+					background-position: 20% 80%;
+				</div>
+				<div class="background-position-3">
+					background-position: 50px 80px;
+				</div>
+				<div class="background-position-4">
+					background-position: bottom;
+				</div>
+				<div class="background-position-5">
+					background-position: right bottom;
+				</div>
+				<div class="background-position-6">
+					background-position: bottom right;
+				</div>
+			</div>
+
+			<div id="background-size">
+				<h2>Background-size</h2>
+				Масштабирует фоновое изображение согласно заданным размерам. В цифрах, где первое значение (проценты,
+				px) определяет
+				ширину, второе - высоту. Либо специальным значением. <br>
+				<span class='underline'>Значения:</span> <br>
+				<span class='mark'>auto</span> - значение по умолчанию. Высота и ширина изображения равны его
+				оригинальным размерам.
+				<div class="background-size-1">
+					background-size: auto;
+				</div>
+				<span class='mark'>длина</span> - размер задается парой значений, первое значение устанавливает ширину
+				изображения, второе — высоту. Для того, чтобы
+				фон масштабировался вместе с текстом, размеры изображения нужно задавать в em.
+				<div class="background-size-2">
+					background-size: 200px;
+				</div>
+				<div class="background-size-3">
+					background-size: 100px 300px;
+				</div>
+				<span class='mark'>%</span> - задает размер фонового изображения в процентах от ширины или высоты
+				элемента, которое заполняется фоном.
+				<div class="background-size-4">
+					background-size: 100%;
+				</div>
+				<div class="background-size-5">
+					background-size: 200%;
+				</div>
+				<div class="background-size-6">
+					background-size: 50%;
+				</div>
+				<div class="background-size-7">
+					background-size: 50% 100%;
+				</div>
+				<span class='mark'>cover</span> - масштабирует изображение с сохранением пропорций так, чтобы его ширина
+				или высота равнялась ширине или высоте блока - по большей стороне изображения.
+				<div class="background-size-8">
+					background-size: cover;
+				</div>
+				<span class='mark'>contain</span> - масштабирует изображение с сохранением пропорций таким образом,
+				чтобы оно целиком поместилось внутри блока.
+
+				<div class="background-size-9">
+					background-size: contain;
+				</div>
+			</div>
+
+			<div id="background-attachment">
+				<h2>Background-attachment</h2>
+				Свойство <span class='mark'>background-attachment</span> указывает, является ли фоновое изображение
+				фиксированными относительно области просмотра
+				или прокручивается вместе с элементом или его содержимым. <br>
+				Свойство не наследуется.
+				<span class='underline'>Значения:</span> <br>
+				<span class='mark'>scroll</span> - значение по умолчанию. Фоновое изображение прокручивается вместе с
+				текстом и другим содержимым.
+				<div class="background-attachment-1">
+					background-attachment: scroll; <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint
+					libero nisi nemo minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+				</div>
+				<span class='mark'>fixed</span> - предотвращает перемещение, фиксирует фоновое изображение на заднем
+				плане.
+				<div class="background-attachment-2">
+					background-attachment: fixed; <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint
+					libero nisi nemo minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+				</div>
+				<span class='mark'>local</span> - фоновое изображение прокручивается вместе с содержимым элемента.
+				<div class="background-attachment-3">
+					background-attachment: local; <br>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint
+					libero nisi nemo minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptates quidem numquam recusandae
+					nulla reiciendis
+					quia laborum alias ex doloribus, iste aliquid, vel ratione reprehenderit sint libero nisi nemo
+					minus.
+				</div>
+			</div>
+
+			<div id="background-multi-image">
+				<h2>Установка нескольких фоновых изображений для блока</h2>
+				Фон блока элемента может иметь несколько слоев. Количество слоев определяется количеством значений,
+				разделенных
+				запятыми, указанных в свойстве <span class='mark'>background-image</span>. Значение none по-прежнему
+				создает слой. <br>
+
+				<div class="background-multi-image-1">
+				</div>
+			</div>
+
+			<div id="universal-set">
+				<h2>Универсальное свойство background</h2>
+				Универсальное свойство <span class='mark'>background</span> позволяет установить одновременно до пяти характеристик фона. Допустимо указывать параметры сразу нескольких фонов, перечисляя их через запятую. <br>
+				background: цвет картинка или градиент позиция / размер повторение фиксация
+
+				<div class="universal-set-1">
+					background: url(../img/logo.webp) 100px 600px / 400px no-repeat fixed, url(../img/BG.jpg) center / 400px no-repeat
+					scroll;
+				</div>
+			</div>
+
+		</main>
+
+		<footer>
+			<a href="#header" class="start"> Наверх </a>
+		</footer>
+
+
+
+	</div>
+
+</body>
+
+</html>

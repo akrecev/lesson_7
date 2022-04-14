@@ -1,0 +1,312 @@
+@import "null.css";
+
+@font-face {
+	font-family: 'DaxlinePro';
+	src: url(../fonts/DaxlinePro-Regular.woff) format('woff'), url(../fonts/DaxlinePro-Regular.woff2) format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DaxlinePro';
+	src: url(../fonts/DaxlinePro-Bold.woff) format('woff'), url(../fonts/DaxlinePro-Bold.woff2) format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DaxlinePro';
+	src: url(../fonts/DaxlinePro-Black.woff) format('woff'), url(../fonts/DaxlinePro-Black.woff2) format('woff2');
+	font-weight: 900;
+	font-style: normal;
+}
+
+body {
+	font-family: 'DaxlinePro';
+	font-style: normal;
+	font-size: 20px;
+	line-height: 1.2;
+	background-image:linear-gradient(0deg, rgba(255, 255, 255, 0.8) 100%, rgba(255, 255, 255, 0.8) 100%), url(../img/fon-pattern-30.png);
+	background-size: 200px;
+}
+
+h1 {
+	color:rgb(59, 59, 59);
+	font-weight: 900;
+	font-size: 30px;
+	text-align: center;
+	margin: 20px;
+}
+h2 {
+	color:rgb(59, 59, 59);
+	font-weight: 900;
+	font-size: 25px;
+	text-align: center;
+	margin: 5px;
+}
+header, footer {
+	text-align: center;
+}
+.mark {
+	font-weight: 700;
+}
+.underline {
+	text-decoration: underline;
+}
+.description {
+	margin: 0 20px 20px 20px;
+	padding: 10px;
+	color: darkblue;
+	background-color:rgba(127, 255, 212, 0.2);
+	border-radius: 100px;
+}
+nav a, .start {
+	display: inline-block;
+	margin: 0 10px 10px;
+	padding: 5px 10px 5px 35px;
+	border: 1px solid gray;
+	border-radius: 50px;
+	box-shadow: inset -3px -3px 10px 0 rgb(170, 144, 144), 3px 3px 10px 1px rgb(98, 124, 122);
+	background: white url(../img/BG.png) 7px 2px / 20px no-repeat;
+}
+
+#background-color {
+	background-color:rgba(122, 43, 43, 0.185);
+	padding: 10px;
+}
+.background-color-1 {
+	width: 500px;
+	height: 150px;
+	background-color:blue;
+	color:red;
+	margin: 10px;
+	padding: 5px;
+}
+.background-color-2 {
+	width: 500px;
+	height: 150px;
+	background-color:rgb(0, 0, 255);
+	color:red;
+	margin: 10px;
+	padding: 5px;
+}
+.background-color-3 {
+	width: 500px;
+	height: 150px;
+	background-color:rgba(0, 0, 255, 0.5);
+	color:black;
+	margin: 0 10px 10px;
+	padding: 5px;
+}
+.background-color-4 {
+	width: 500px;
+	height: 150px;
+	background-color:transparent;
+	color:black;
+	margin: 0 10px 10px;
+	padding: 5px;
+	border: 1px solid gray;
+}
+#background-image {
+	background-color: rgba(78, 122, 43, 0.185);
+	padding: 10px;
+}
+.background-image-1 {
+	width: 520px;
+	height: 290px;
+	margin: 0 20px 20px;
+	color: red;
+	background-image: url(https:edu.fls.guru/img/logo.webp), linear-gradient(0deg, yellow 0%, blue 100%);
+	border: 1px solid gray;
+}
+.background-image-2 {
+	width: 400px;
+	height: 400px;
+	color: red;
+	margin: 0 20px 20px;
+	background-image: url(../img/man.png);
+	border: 1px solid gray;
+}
+.background-image-3 {
+	width: 400px;
+	height: 400px;
+	margin: 0 20px 20px;
+	background-image: linear-gradient(white, gray);
+	border: 1px solid gray;
+}
+.background-image-4 {
+	width: 400px;
+	height: 400px;
+	margin: 0 20px 20px;
+	background-image: radial-gradient(white, gray);
+	border: 1px solid gray;
+}
+.background-image-5 {
+	width: 400px;
+	height: 400px;
+	margin: 0 20px 20px;
+	background-image: inherit;
+	border: 1px solid gray;
+}
+#background-repeat {
+	background-color: rgba(227, 238, 79, 0.185);
+	padding: 10px;
+}
+#background-repeat div {
+	width: 350px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background-image: url(../img/BG.png);
+	border: 1px solid gray;
+	color: red;
+}
+.background-repeat-1 {
+	background-repeat:repeat;
+}
+.background-repeat-1-1 {
+	background-image: url(../img/BG.jpg) !important;
+	background-repeat:repeat;
+}
+.background-repeat-2 {
+	background-repeat:no-repeat;
+}
+.background-repeat-3 {
+	background-repeat:repeat-x;
+}
+.background-repeat-4 {
+	background-repeat:repeat-y;
+}
+.background-repeat-5 {
+	background-repeat:space;
+}
+.background-repeat-5-1 {
+	background-repeat:space no-repeat;
+}
+.background-repeat-6 {
+	background-repeat:round;
+}
+.background-repeat-6-1 {
+	background-repeat:round no-repeat;
+}
+
+#background-position {
+	background-color: rgba(238, 79, 203, 0.185);
+	padding: 10px;
+}
+#background-position div {
+	width: 350px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background-image: url(../img/BG.png);
+	background-repeat:no-repeat;
+	border: 1px solid gray;
+	color: red;
+}
+.background-position-1 {
+	background-position: top left;
+}
+.background-position-2 {
+	background-position: center;
+}
+.background-position-3 {
+	background-position: 50px 80px;
+}
+.background-position-4 {
+	background-position: bottom;
+}
+.background-position-5 {
+	background-position: right bottom;
+}
+.background-position-6 {
+	background-position: bottom right;
+}
+
+#background-size {
+	background-color: rgba(79, 103, 238, 0.185);
+	padding: 10px;
+}
+
+#background-size div {
+	width: 350px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background-image: url(../img/logo.webp);
+	background-repeat: no-repeat;
+	border: 1px solid gray;
+	color: red;
+}
+.background-size-1 {
+	background-size: auto;
+}
+.background-size-2 {
+	background-size: 200px;
+}
+.background-size-3 {
+	background-size: 100px 300px;
+}
+.background-size-4 {
+	background-size: 100%;
+}
+.background-size-5 {
+	background-size: 200%;
+}
+.background-size-6 {
+	background-size: 50%;
+}
+.background-size-7 {
+	background-size: 50% 100%;
+}
+.background-size-8 {
+	background-size: cover;
+}
+.background-size-9 {
+	background-size: contain;
+}
+
+#background-attachment {
+	background-color: rgba(238, 79, 238, 0.185);
+	padding: 10px;
+}
+#background-attachment div {
+	width: 550px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background-image: url(../img/logo.webp);
+	background-repeat: no-repeat;
+	border: 1px solid gray;
+}
+.background-attachment-1 {
+	background-attachment: scroll;
+	overflow: auto;
+}
+.background-attachment-2 {
+	background-position:35px 200px;
+	background-attachment: fixed;
+	overflow: auto;
+}
+.background-attachment-3 {
+	background-size: 200%;
+	background-attachment: local;
+	overflow: auto;
+}
+
+.background-multi-image-1 {
+	width: 550px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background-image:url(../img/BG.png), url(../img/BG.png), url(../img/BG.png), url(../img/BG.png), url(../img/BG.png), url(../img/logo.webp);
+	background-position:0 0, center, 100% 100%, right top, left bottom;
+	background-repeat: no-repeat;
+	border: 1px solid gray;
+}
+
+#universal-set {
+	background-color: rgba(255, 252, 82, 0.185);
+	padding: 10px;
+}
+
+#universal-set div {
+	width: 550px;
+	height: 350px;
+	margin: 0 20px 20px;
+	background: url(../img/logo.webp) 100px 600px / 400px no-repeat fixed, url(../img/BG.jpg) center / 400px no-repeat scroll;
+	border: 1px solid gray;
+}
